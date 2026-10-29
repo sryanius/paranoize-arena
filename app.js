@@ -22,9 +22,11 @@ async function boot() {
   let X;
   try { X = await (await fetch('data.json', { cache: 'no-cache' })).json(); }
   catch { $('lede').textContent = '자료를 못 읽었습니다.'; return; }
-  document.title = `${X.me.name} → ${X.opp.name} 투기장 추천 덱`;
-  $('h1').textContent = `${X.me.name} → ${X.opp.name} 추천 덱`;
+  const tag = X.tag ? ' · ' + X.tag : '';
+  document.title = `${X.me.name} → ${X.opp.name} 투기장 추천 덱${tag}`;
+  $('h1').textContent = `${X.me.name} → ${X.opp.name} 추천 덱${tag}`;
   $('lede').textContent = `랭킹에서 읽은 ${X.opp.name} 님의 덱(${X.read}) 상대로, ${X.me.name} 님의 지금 24명을 그대로 두고 자리만 바꾼 순서입니다. 캐릭터를 새로 넣거나 빼지 않습니다.`;
+  if (X.memo) $('lede').insertAdjacentHTML('afterend', `<p class="memo">${esc(X.memo)}</p>`);
   $('wins').innerHTML = X.matches.slice().sort((a, b) => b.atk - a.atk).map((m) => {
     const d = m.proposed - m.current;
     return `<div class="win"><p class="k">${m.atk ? `${esc(X.opp.name)} 님을 공격할 때` : `${esc(X.opp.name)} 님이 공격해 올 때`}</p>
