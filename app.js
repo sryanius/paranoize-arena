@@ -5,6 +5,8 @@ const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&l
 const pct = (x) => (100 * x).toFixed(1) + '%';
 // 전력 표시는 게임 편성 화면과 같게: 10만 이상은 만 단위 반올림(166만) · 그 아래는 소수 한 자리(7.6만 · 9만)
 const man = (v) => (v >= 1e5 ? Math.round(v / 1e4) + '만' : v >= 1e4 ? +(v / 1e4).toFixed(1) + '만' : v.toLocaleString());
+const fitted = (src) => String(src || '').startsWith('역산');
+const how = (src) => (fitted(src) ? '전력에서 역산한 것' : '가장 최근 투기장 기록');
 const sumPw = (us) => (us.every((u) => u && u.pw != null) ? us.reduce((a, u) => a + u.pw, 0) : null);
 // 게임 카드 그림(../img · Characters 236)이 없으면 전신 그림을 빌린다: 기본형 → 같은 계열 순
 function alts(u) { const k = u.t, a = []; if (/AltSR$/.test(k)) a.push(k.replace(/AltSR$/, 'AltR'), k.replace(/AltSR$/, 'R')); if (/SR$/.test(k)) a.push(k.replace(/SR$/, '')); if (/SR\d$/.test(k)) a.push(k.replace(/SR\d$/, 'R')); return [...new Set([...a, ...(u.alt || [])])].filter((x) => x !== k); }
@@ -45,7 +47,9 @@ async function boot() {
   $('notes').innerHTML = [
     `승률은 각 ${X.seeds.toLocaleString()}판 시뮬레이션 결과입니다(게임과 같은 무작위 규칙).`,
     `${esc(X.opp.name)} 님이 덱 순서를 바꾸면 결과가 달라집니다. 이 덱은 ${X.read}에 랭킹에서 읽은 순서 기준입니다.`,
-    `투귀공명·캠퍼스 보너스는 랭킹에 안 나와서 두 분이 나온 가장 최근 투기장 기록의 값을 썼습니다(그 뒤로 올랐다면 조금 다를 수 있습니다). 통솔은 ${esc(X.me.name)} ${X.me.rank} · ${esc(X.opp.name)} ${X.opp.rank}.`,
+    X.teams
+      ? `투귀공명·캠퍼스 보너스는 랭킹에 안 나와서 ${esc(X.me.name)} 님은 ${how(X.teams.me)}, ${esc(X.opp.name)} 님은 ${how(X.teams.opp)}의 값을 썼습니다${[X.teams.me, X.teams.opp].some(fitted) ? '(역산은 게임 프로필의 캐릭터별 전력에서 거꾸로 계산한 것 — 실제 기록이 있는 사람으로 맞춰 보니 승률 차이 0.2%p 안팎)' : ''}. 통솔은 ${esc(X.me.name)} ${X.me.rank} · ${esc(X.opp.name)} ${X.opp.rank}.`
+      : `투귀공명·캠퍼스 보너스는 랭킹에 안 나와서 두 분이 나온 가장 최근 투기장 기록의 값을 썼습니다(그 뒤로 올랐다면 조금 다를 수 있습니다). 통솔은 ${esc(X.me.name)} ${X.me.rank} · ${esc(X.opp.name)} ${X.opp.rank}.`,
     `이 순서는 ${esc(X.opp.name)} 님 상대로만 계산했습니다. 투기장 덱과 유적 덱은 같은 페이지를 쓰니, 다른 상대나 유적에서는 지금 덱이 나을 수 있습니다.`,
     ...(sumPw(C) != null ? [`전력은 ${X.read} 게임 프로필에서 읽은 값입니다(게임 편성 화면 숫자와 같음).`] : []),
     `같은 덱끼리라도 공격과 방어 승률이 다릅니다 — 공격하는 쪽이 자리마다 조금 먼저 들어와 먼저 행동하기 때문입니다. 그게 유리한지는 덱마다 다릅니다.`,
