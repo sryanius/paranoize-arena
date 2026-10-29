@@ -1,0 +1,57 @@
+:root{
+  --ground:#ECEEF1; --surface:#FFFFFF; --raised:#F5F7F9;
+  --ink:#14171C; --body:#39414B; --muted:#6B7580; --faint:#98A1AB;
+  --line:#D6DBE1; --line-soft:#E6EAEF; --accent:#7A3E9D; --up:#2F8F57;
+  --fire:#C9502E; --water:#2F6FB3; --earth:#4F8A3C;
+  --shadow:0 1px 2px rgba(20,23,28,.06),0 4px 14px rgba(20,23,28,.05);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#0E1115; --surface:#171B22; --raised:#1E242C;
+  --ink:#EDF0F4; --body:#C2CAD3; --muted:#8B95A0; --faint:#69737E;
+  --line:#2A313A; --line-soft:#222831; --accent:#C58FE6; --up:#5FC48A;
+  --fire:#F07A55; --water:#6FA6E6; --earth:#7FC06A;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 4px 14px rgba(0,0,0,.3);
+}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--body);font-family:"IBM Plex Sans KR",system-ui,-apple-system,"Malgun Gothic",sans-serif;font-size:14px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:0 16px 80px}
+header{padding:28px 0 20px;border-bottom:1px solid var(--line)}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.16em;color:var(--faint);margin:0 0 8px}
+h1{font-family:"Gowun Batang",Georgia,serif;font-weight:700;font-size:clamp(24px,5vw,38px);line-height:1.18;color:var(--ink);margin:0 0 10px;letter-spacing:-.01em;text-wrap:balance}
+h2{font-family:"Gowun Batang",Georgia,serif;font-size:19px;color:var(--ink);margin:34px 0 10px}
+.lede{margin:0;max-width:64ch;color:var(--muted);font-size:14px}
+.wins{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:20px}
+.win{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
+.win .k{font-size:13px;color:var(--muted);margin:0 0 4px}
+.win .v{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
+.win .v s{color:var(--faint);text-decoration:none;font-size:15px}
+.win .v b{font-size:30px;color:var(--ink);font-weight:600;line-height:1.1}
+.win .v i{font-style:normal;font-size:13px;font-weight:600;color:var(--up)}
+.win .v i.down{color:var(--fire)}
+.bar{height:6px;background:var(--line-soft);border-radius:99px;overflow:hidden;margin-top:10px;position:relative}
+.bar span{position:absolute;left:0;top:0;bottom:0;border-radius:99px}
+.bar .c{background:var(--faint);opacity:.55}.bar .p{background:var(--accent);height:3px;top:auto}
+.plt{display:grid;gap:8px}
+.plt-row{display:grid;grid-template-columns:40px repeat(6,minmax(0,1fr));gap:6px;align-items:stretch}
+.plt-row>b{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--faint);align-self:center}
+.card{position:relative;display:block;border:2px solid var(--line);border-radius:8px;overflow:hidden;background:var(--raised);aspect-ratio:3/4.2;min-width:0}
+.card img{display:block;position:absolute;width:150%;height:auto;left:-25%;top:-3%}
+/* 게임 편성 화면과 같은 카드 그림(Characters 236 · 148x236) — 위쪽 기준으로 채운다 */
+.card img.face{width:100%;height:100%;left:0;top:0;object-fit:cover;object-position:50% 0}
+.card .rar{position:absolute;left:0;top:0;padding:1px 6px 1px 4px;font:700 10px "IBM Plex Mono",monospace;color:#fff;background:#6b7280;border-radius:0 0 7px 0}
+.card.SSR{border-color:#d4a83a}.card.SSR .rar{background:linear-gradient(90deg,#c48f1c,#f0c65a);color:#2a1d00}
+.card.SR{border-color:#9b6be0}.card.SR .rar{background:linear-gradient(90deg,#7b47c9,#b48cf2)}
+.card.R{border-color:#4f8ad6}.card.R .rar{background:linear-gradient(90deg,#3a6fc0,#78a8ee)}
+.card .el{position:absolute;right:3px;top:3px;width:12px;height:12px;border-radius:50%;border:1.5px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.35)}
+.card.Fire .el{background:var(--fire)}.card.Water .el{background:var(--water)}.card.Earth .el{background:var(--earth)}
+.card .st{position:absolute;left:0;right:0;bottom:19px;text-align:center;font-size:9px;line-height:1;color:#ffd75e;text-shadow:0 0 2px #000,0 1px 1px #000;letter-spacing:-.5px}
+.card .lv{position:absolute;left:0;right:0;bottom:0;padding:2px 3px;background:rgba(0,0,0,.72);color:#fff;font:600 10.5px "IBM Plex Mono",monospace;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card .n{position:absolute;left:0;right:0;top:16px;padding:1px 3px;font-size:10px;font-weight:600;color:#fff;text-shadow:0 0 3px #000,0 1px 2px #000;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card.moved{outline:2px solid var(--accent);outline-offset:1px}
+.card.moved .lv{background:var(--accent)}
+.note{border-left:3px solid var(--accent);padding:10px 14px;background:var(--surface);border-radius:0 10px 10px 0;font-size:13px;margin-top:12px;color:var(--muted)}
+.note ul{margin:0;padding-left:18px}
+.legend{font-size:12px;color:var(--faint);margin:8px 0 0}
+footer{margin-top:40px;font-size:12px;color:var(--faint)}
+@media (max-width:640px){.plt-row{grid-template-columns:repeat(3,minmax(0,1fr))}.plt-row>b{grid-column:1/-1}}
