@@ -13,7 +13,7 @@ const pic = (u) => (u.f ? `<img class="face" src="../img/${u.t}.jpg" alt="" load
 const card = (u, moved = '') => `<div class="cell"><div class="card ${u.r} ${u.e} ${moved ? 'moved' : ''}" title="${esc(u.n)} · ${u.r} · Lv${u.lv}${u.pw != null ? ' · 전력 ' + u.pw.toLocaleString() : ''}">
   ${pic(u)}
   <span class="rar">${u.r}</span><span class="el"></span><span class="n">${esc(u.n)}</span>
-  ${u.s ? `<span class="st">${'★'.repeat(u.s)}</span>` : ''}<span class="lv">Lv.${u.lv}${moved}</span></div>${u.pw != null ? `<span class="pw">${man(u.pw)}</span>` : ''}</div>`;
+  ${u.s ? `<span class="st">${'★'.repeat(u.s)}</span>` : ''}<span class="lv">Lv.${u.lv}</span></div>${u.pw != null ? `<span class="pw">${man(u.pw)}</span>` : ''}${moved ? `<span class="from">${moved.trim()}</span>` : ''}</div>`;
 // us = 24명(순서대로) · 반 이름 줄에 그 반 전력 합계(게임의 «제 1반 🔥30,761,408»)
 const rows = (us, cells) => [0, 1, 2, 3].map((p) => { const t = sumPw(us.slice(p * 6, p * 6 + 6)); return `<div class="plt-row"><b>${p + 1}반${t != null ? `<i>전력 ${t.toLocaleString()}</i>` : ''}</b>${cells.slice(p * 6, p * 6 + 6).join('')}</div>`; }).join('');
 const deckPw = (us) => { const t = sumPw(us); return t != null ? ` · 전력 ${t.toLocaleString()}` : ''; };
