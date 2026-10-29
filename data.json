@@ -1,0 +1,653 @@
+{
+ "entries": [
+  {
+   "id": "fullferry-rise",
+   "me": {
+    "name": "FullFerry",
+    "rank": 132
+   },
+   "opp": {
+    "name": "리세",
+    "rank": 135,
+    "deck": [
+     {
+      "t": "BearAltR",
+      "n": "폴란체",
+      "r": "R",
+      "e": "Earth",
+      "s": 4,
+      "lv": 7,
+      "alt": [
+       "BearR",
+       "BearAltSR"
+      ]
+     },
+     {
+      "t": "JinRegSR",
+      "n": "진",
+      "r": "SR",
+      "e": "Fire",
+      "s": 0,
+      "lv": 1,
+      "alt": [
+       "JinReg",
+       "JinJapan"
+      ]
+     },
+     {
+      "t": "GenRegR",
+      "n": "겐",
+      "r": "R",
+      "e": "Earth",
+      "s": 4,
+      "lv": 1,
+      "alt": []
+     },
+     {
+      "t": "AyaRegR",
+      "n": "아야",
+      "r": "R",
+      "e": "Water",
+      "s": 4,
+      "lv": 11,
+      "alt": []
+     },
+     {
+      "t": "DaichiRegSR",
+      "n": "다이치",
+      "r": "SR",
+      "e": "Water",
+      "s": 4,
+      "lv": 1,
+      "alt": [
+       "DaichiReg"
+      ]
+     },
+     {
+      "t": "RyokoRegSR",
+      "n": "료코",
+      "r": "SR",
+      "e": "Earth",
+      "s": 1,
+      "lv": 1,
+      "alt": [
+       "RyokoReg",
+       "RyokoSwim"
+      ]
+     },
+     {
+      "t": "ReikaUni",
+      "n": "레이카",
+      "r": "SSR",
+      "e": "Fire",
+      "s": 0,
+      "lv": 200,
+      "alt": [
+       "ReikaReg",
+       "ReikaShip",
+       "ReikaRegSR"
+      ]
+     },
+     {
+      "t": "RosaReg",
+      "n": "로사",
+      "r": "SSR",
+      "e": "Fire",
+      "s": 3,
+      "lv": 200,
+      "alt": []
+     },
+     {
+      "t": "MokumaruReg",
+      "n": "스모키",
+      "r": "SR",
+      "e": "Water",
+      "s": 4,
+      "lv": 25,
+      "alt": []
+     },
+     {
+      "t": "TomoyaUniSR",
+      "n": "토모야",
+      "r": "SR",
+      "e": "Water",
+      "s": 1,
+      "lv": 1,
+      "alt": [
+       "TomoyaUni",
+       "TomoyaPara",
+       "TomoyaOnsen"
+      ]
+     },
+     {
+      "t": "NayuSwim",
+      "n": "나유타",
+      "r": "SSR",
+      "e": "Water",
+      "s": 0,
+      "lv": 101,
+      "alt": [
+       "NayuReg",
+       "NayuRegSR"
+      ]
+     },
+     {
+      "t": "BullSR",
+      "n": "홀리카우",
+      "r": "SR",
+      "e": "Water",
+      "s": 0,
+      "lv": 1,
+      "alt": [
+       "BullAltSR2",
+       "BullAltSR1"
+      ]
+     },
+     {
+      "t": "LionR",
+      "n": "모플레임",
+      "r": "R",
+      "e": "Water",
+      "s": 4,
+      "lv": 1,
+      "alt": [
+       "LionAltR1",
+       "LionAltR2"
+      ]
+     },
+     {
+      "t": "YinYangSR",
+      "n": "음양",
+      "r": "SR",
+      "e": "Water",
+      "s": 0,
+      "lv": 1,
+      "alt": [
+       "YinYangAltSR2",
+       "YinYangAltSR1"
+      ]
+     },
+     {
+      "t": "ShokoRegSR",
+      "n": "쇼코",
+      "r": "SR",
+      "e": "Fire",
+      "s": 0,
+      "lv": 1,
+      "alt": [
+       "ShokoReg",
+       "ShokoSwim",
+       "ShokoBridal"
+      ]
+     },
+     {
+      "t": "PenguinR",
+      "n": "펭글라스",
+      "r": "R",
+      "e": "Fire",
+      "s": 4,
+      "lv": 1,
+      "alt": [
+       "PenguinAltR1",
+       "PenguinAltR2"
+      ]
+     },
+     {
+      "t": "RyuKendo",
+      "n": "류",
+      "r": "SSR",
+      "e": "Earth",
+      "s": 2,
+      "lv": 1,
+      "alt": [
+       "RyuOnsen",
+       "RyuKendoSR"
+      ]
+     },
+     {
+      "t": "RyokoSwim",
+      "n": "료코",
+      "r": "SSR",
+      "e": "Earth",
+      "s": 0,
+      "lv": 3,
+      "alt": [
+       "RyokoReg",
+       "RyokoRegSR"
+      ]
+     },
+     {
+      "t": "CapybaraAltSR",
+      "n": "카피반",
+      "r": "SR",
+      "e": "Water",
+      "s": 4,
+      "lv": 1,
+      "alt": [
+       "CapybaraR",
+       "CapybaraAltR"
+      ]
+     },
+     {
+      "t": "CapybaraAltR",
+      "n": "카피메테오",
+      "r": "R",
+      "e": "Earth",
+      "s": 4,
+      "lv": 1,
+      "alt": [
+       "CapybaraR",
+       "CapybaraAltSR"
+      ]
+     },
+     {
+      "t": "YuiUniSR",
+      "n": "유이",
+      "r": "SR",
+      "e": "Water",
+      "s": 0,
+      "lv": 25,
+      "alt": [
+       "YuiUni",
+       "YuiSwim",
+       "YuiKendo"
+      ]
+     },
+     {
+      "t": "BearAltSR",
+      "n": "베어복",
+      "r": "SR",
+      "e": "Water",
+      "s": 4,
+      "lv": 1,
+      "alt": [
+       "BearR",
+       "BearAltR"
+      ]
+     },
+     {
+      "t": "MinamiRegSR",
+      "n": "미나미",
+      "r": "SR",
+      "e": "Water",
+      "s": 0,
+      "lv": 1,
+      "alt": [
+       "MinamiReg",
+       "MinamiRoom",
+       "MinamiShip"
+      ]
+     },
+     {
+      "t": "RenjiUniSR",
+      "n": "렌지",
+      "r": "SR",
+      "e": "Fire",
+      "s": 0,
+      "lv": 1,
+      "alt": [
+       "RenjiUni",
+       "RenjiKendo",
+       "RenjiOnsen"
+      ]
+     }
+    ]
+   },
+   "read": "2026-10-29",
+   "seeds": 4000,
+   "matches": [
+    {
+     "atk": false,
+     "current": 0.18125,
+     "proposed": 0.67075
+    },
+    {
+     "atk": true,
+     "current": 0.25525,
+     "proposed": 0.67
+    }
+   ],
+   "current": [
+    "ReikaUni",
+    "ErikaReg",
+    "MeisaReg",
+    "RosaSwim",
+    "YokoReg",
+    "TomoyaPara",
+    "TomoyaUni",
+    "ShokoReg",
+    "YuiKendo",
+    "MinamiRoom",
+    "RenjiKendo",
+    "SheepR",
+    "SpiralCatAltR1",
+    "RyokoRegSR",
+    "YinYangSR",
+    "LionR",
+    "ErikaRegSR",
+    "MokumaruReg",
+    "TomoyaUniSR",
+    "BullSR",
+    "PenguinR",
+    "ZenRegSR",
+    "RibbonCatSR",
+    "NayuRegSR"
+   ],
+   "proposed": [
+    "YuiKendo",
+    "TomoyaPara",
+    "ShokoReg",
+    "RosaSwim",
+    "MinamiRoom",
+    "MeisaReg",
+    "ErikaReg",
+    "ReikaUni",
+    "YinYangSR",
+    "MokumaruReg",
+    "SpiralCatAltR1",
+    "RenjiKendo",
+    "LionR",
+    "TomoyaUniSR",
+    "YokoReg",
+    "TomoyaUni",
+    "ErikaRegSR",
+    "RibbonCatSR",
+    "RyokoRegSR",
+    "BullSR",
+    "NayuRegSR",
+    "SheepR",
+    "ZenRegSR",
+    "PenguinR"
+   ],
+   "units": {
+    "ReikaUni": {
+     "t": "ReikaUni",
+     "n": "레이카",
+     "r": "SSR",
+     "e": "Fire",
+     "s": 4,
+     "lv": 185,
+     "alt": [
+      "ReikaReg",
+      "ReikaShip",
+      "ReikaRegSR"
+     ]
+    },
+    "ErikaReg": {
+     "t": "ErikaReg",
+     "n": "에리카",
+     "r": "SSR",
+     "e": "Fire",
+     "s": 2,
+     "lv": 200,
+     "alt": [
+      "ErikaRegSR"
+     ]
+    },
+    "MeisaReg": {
+     "t": "MeisaReg",
+     "n": "메이사",
+     "r": "SSR",
+     "e": "Fire",
+     "s": 4,
+     "lv": 101,
+     "alt": [
+      "MeisaShip",
+      "MeisaRegSR",
+      "MeisaCasual"
+     ]
+    },
+    "RosaSwim": {
+     "t": "RosaSwim",
+     "n": "로사",
+     "r": "SSR",
+     "e": "Fire",
+     "s": 4,
+     "lv": 25,
+     "alt": [
+      "RosaReg"
+     ]
+    },
+    "YokoReg": {
+     "t": "YokoReg",
+     "n": "요코",
+     "r": "SSR",
+     "e": "Fire",
+     "s": 4,
+     "lv": 101,
+     "alt": []
+    },
+    "TomoyaPara": {
+     "t": "TomoyaPara",
+     "n": "토모야",
+     "r": "SSR",
+     "e": "Fire",
+     "s": 4,
+     "lv": 50,
+     "alt": [
+      "TomoyaUni",
+      "TomoyaUniSR",
+      "TomoyaOnsen"
+     ]
+    },
+    "TomoyaUni": {
+     "t": "TomoyaUni",
+     "n": "토모야",
+     "r": "SSR",
+     "e": "Water",
+     "s": 0,
+     "lv": 25,
+     "alt": [
+      "TomoyaPara",
+      "TomoyaUniSR",
+      "TomoyaOnsen"
+     ]
+    },
+    "ShokoReg": {
+     "t": "ShokoReg",
+     "n": "쇼코",
+     "r": "SSR",
+     "e": "Fire",
+     "s": 4,
+     "lv": 76,
+     "alt": [
+      "ShokoSwim",
+      "ShokoRegSR",
+      "ShokoBridal"
+     ]
+    },
+    "YuiKendo": {
+     "t": "YuiKendo",
+     "n": "유이",
+     "r": "SSR",
+     "e": "Earth",
+     "s": 4,
+     "lv": 75,
+     "alt": [
+      "YuiUni",
+      "YuiSwim",
+      "YuiUniSR"
+     ]
+    },
+    "MinamiRoom": {
+     "t": "MinamiRoom",
+     "n": "미나미",
+     "r": "SSR",
+     "e": "Water",
+     "s": 4,
+     "lv": 25,
+     "alt": [
+      "MinamiReg",
+      "MinamiShip",
+      "MinamiSwim"
+     ]
+    },
+    "RenjiKendo": {
+     "t": "RenjiKendo",
+     "n": "렌지",
+     "r": "SSR",
+     "e": "Earth",
+     "s": 0,
+     "lv": 25,
+     "alt": [
+      "RenjiUni",
+      "RenjiUniSR",
+      "RenjiOnsen"
+     ]
+    },
+    "SheepR": {
+     "t": "SheepR",
+     "n": "라무마",
+     "r": "R",
+     "e": "Earth",
+     "s": 4,
+     "lv": 1,
+     "alt": [
+      "SheepAltR1",
+      "SheepAltR2"
+     ]
+    },
+    "SpiralCatAltR1": {
+     "t": "SpiralCatAltR1",
+     "n": "야네이도",
+     "r": "R",
+     "e": "Fire",
+     "s": 4,
+     "lv": 1,
+     "alt": [
+      "SpiralCatR",
+      "SpiralCatAltR2"
+     ]
+    },
+    "RyokoRegSR": {
+     "t": "RyokoRegSR",
+     "n": "료코",
+     "r": "SR",
+     "e": "Earth",
+     "s": 4,
+     "lv": 25,
+     "alt": [
+      "RyokoReg",
+      "RyokoSwim"
+     ]
+    },
+    "YinYangSR": {
+     "t": "YinYangSR",
+     "n": "음양",
+     "r": "SR",
+     "e": "Water",
+     "s": 0,
+     "lv": 1,
+     "alt": [
+      "YinYangAltSR2",
+      "YinYangAltSR1"
+     ]
+    },
+    "LionR": {
+     "t": "LionR",
+     "n": "모플레임",
+     "r": "R",
+     "e": "Water",
+     "s": 4,
+     "lv": 1,
+     "alt": [
+      "LionAltR1",
+      "LionAltR2"
+     ]
+    },
+    "ErikaRegSR": {
+     "t": "ErikaRegSR",
+     "n": "에리카",
+     "r": "SR",
+     "e": "Earth",
+     "s": 3,
+     "lv": 2,
+     "alt": [
+      "ErikaReg"
+     ]
+    },
+    "MokumaruReg": {
+     "t": "MokumaruReg",
+     "n": "스모키",
+     "r": "SR",
+     "e": "Water",
+     "s": 4,
+     "lv": 25,
+     "alt": []
+    },
+    "TomoyaUniSR": {
+     "t": "TomoyaUniSR",
+     "n": "토모야",
+     "r": "SR",
+     "e": "Water",
+     "s": 0,
+     "lv": 1,
+     "alt": [
+      "TomoyaUni",
+      "TomoyaPara",
+      "TomoyaOnsen"
+     ]
+    },
+    "BullSR": {
+     "t": "BullSR",
+     "n": "홀리카우",
+     "r": "SR",
+     "e": "Water",
+     "s": 4,
+     "lv": 6,
+     "alt": [
+      "BullAltSR2",
+      "BullAltSR1"
+     ]
+    },
+    "PenguinR": {
+     "t": "PenguinR",
+     "n": "펭글라스",
+     "r": "R",
+     "e": "Fire",
+     "s": 4,
+     "lv": 1,
+     "alt": [
+      "PenguinAltR1",
+      "PenguinAltR2"
+     ]
+    },
+    "ZenRegSR": {
+     "t": "ZenRegSR",
+     "n": "젠",
+     "r": "SR",
+     "e": "Fire",
+     "s": 4,
+     "lv": 25,
+     "alt": [
+      "ZenReg"
+     ]
+    },
+    "RibbonCatSR": {
+     "t": "RibbonCatSR",
+     "n": "드레샤트",
+     "r": "SR",
+     "e": "Earth",
+     "s": 2,
+     "lv": 2,
+     "alt": [
+      "RibbonCatAltSR1",
+      "RibbonCatAltSR2"
+     ]
+    },
+    "NayuRegSR": {
+     "t": "NayuRegSR",
+     "n": "나유타",
+     "r": "SR",
+     "e": "Water",
+     "s": 1,
+     "lv": 2,
+     "alt": [
+      "NayuReg",
+      "NayuSwim"
+     ]
+    }
+   }
+  }
+ ]
+}
