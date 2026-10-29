@@ -18,6 +18,7 @@
      "BearR",
      "BearAltSR"
     ],
+    "pw": 193868,
     "f": 1
    },
    {
@@ -31,6 +32,7 @@
      "JinReg",
      "JinJapan"
     ],
+    "pw": 107231,
     "f": 1
    },
    {
@@ -41,6 +43,7 @@
     "s": 4,
     "lv": 1,
     "alt": [],
+    "pw": 92042,
     "f": 1
    },
    {
@@ -51,6 +54,7 @@
     "s": 4,
     "lv": 11,
     "alt": [],
+    "pw": 117694,
     "f": 1
    },
    {
@@ -63,6 +67,7 @@
     "alt": [
      "DaichiReg"
     ],
+    "pw": 110460,
     "f": 1
    },
    {
@@ -76,6 +81,7 @@
      "RyokoReg",
      "RyokoSwim"
     ],
+    "pw": 58055,
     "f": 1
    },
    {
@@ -90,6 +96,7 @@
      "ReikaShip",
      "ReikaRegSR"
     ],
+    "pw": 7995099,
     "f": 1
    },
    {
@@ -100,6 +107,7 @@
     "s": 3,
     "lv": 200,
     "alt": [],
+    "pw": 17410968,
     "f": 1
    },
    {
@@ -110,6 +118,7 @@
     "s": 4,
     "lv": 25,
     "alt": [],
+    "pw": 257919,
     "f": 1
    },
    {
@@ -124,6 +133,7 @@
      "TomoyaPara",
      "TomoyaOnsen"
     ],
+    "pw": 66904,
     "f": 1
    },
    {
@@ -137,6 +147,7 @@
      "NayuReg",
      "NayuRegSR"
     ],
+    "pw": 3336549,
     "f": 1
    },
    {
@@ -150,6 +161,7 @@
      "BullAltSR2",
      "BullAltSR1"
     ],
+    "pw": 66045,
     "f": 1
    },
    {
@@ -163,6 +175,7 @@
      "LionAltR1",
      "LionAltR2"
     ],
+    "pw": 66773,
     "f": 1
    },
    {
@@ -176,6 +189,7 @@
      "YinYangAltSR2",
      "YinYangAltSR1"
     ],
+    "pw": 43494,
     "f": 1
    },
    {
@@ -190,6 +204,7 @@
      "ShokoSwim",
      "ShokoBridal"
     ],
+    "pw": 38657,
     "f": 1
    },
    {
@@ -203,6 +218,7 @@
      "PenguinAltR1",
      "PenguinAltR2"
     ],
+    "pw": 93182,
     "f": 1
    },
    {
@@ -216,6 +232,7 @@
      "RyuOnsen",
      "RyuKendoSR"
     ],
+    "pw": 132069,
     "f": 1
    },
    {
@@ -229,6 +246,7 @@
      "RyokoReg",
      "RyokoRegSR"
     ],
+    "pw": 125658,
     "f": 1
    },
    {
@@ -242,6 +260,7 @@
      "CapybaraR",
      "CapybaraAltR"
     ],
+    "pw": 51122,
     "f": 1
    },
    {
@@ -255,6 +274,7 @@
      "CapybaraR",
      "CapybaraAltSR"
     ],
+    "pw": 98589,
     "f": 1
    },
    {
@@ -269,6 +289,7 @@
      "YuiSwim",
      "YuiKendo"
     ],
+    "pw": 173434,
     "f": 1
    },
    {
@@ -282,6 +303,7 @@
      "BearR",
      "BearAltR"
     ],
+    "pw": 69299,
     "f": 1
    },
    {
@@ -296,6 +318,7 @@
      "MinamiRoom",
      "MinamiShip"
     ],
+    "pw": 75066,
     "f": 1
    },
    {
@@ -310,6 +333,7 @@
      "RenjiKendo",
      "RenjiOnsen"
     ],
+    "pw": 47615,
     "f": 1
    }
   ]
@@ -393,6 +417,7 @@
     "ReikaShip",
     "ReikaRegSR"
    ],
+   "pw": 9822682,
    "f": 1
   },
   "ErikaReg": {
@@ -405,6 +430,7 @@
    "alt": [
     "ErikaRegSR"
    ],
+   "pw": 13107197,
    "f": 1
   },
   "MeisaReg": {
@@ -419,6 +445,7 @@
     "MeisaRegSR",
     "MeisaCasual"
    ],
+   "pw": 1655403,
    "f": 1
   },
   "RosaSwim": {
@@ -431,6 +458,7 @@
    "alt": [
     "RosaReg"
    ],
+   "pw": 3279484,
    "f": 1
   },
   "YokoReg": {
@@ -441,6 +469,7 @@
    "s": 4,
    "lv": 101,
    "alt": [],
+   "pw": 2203780,
    "f": 1
   },
   "TomoyaPara": {
@@ -455,6 +484,7 @@
     "TomoyaUniSR",
     "TomoyaOnsen"
    ],
+   "pw": 692862,
    "f": 1
   },
   "TomoyaUni": {
@@ -469,6 +499,7 @@
     "TomoyaUniSR",
     "TomoyaOnsen"
    ],
+   "pw": 201118,
    "f": 1
   },
   "ShokoReg": {
@@ -483,6 +514,7 @@
     "ShokoRegSR",
     "ShokoBridal"
    ],
+   "pw": 1215307,
    "f": 1
   },
   "YuiKendo": {
@@ -497,6 +529,7 @@
     "YuiSwim",
     "YuiUniSR"
    ],
+   "pw": 801328,
    "f": 1
   },
   "MinamiRoom": {
@@ -511,6 +544,7 @@
     "MinamiShip",
     "MinamiSwim"
    ],
+   "pw": 596955,
    "f": 1
   },
   "RenjiKendo": {
@@ -525,6 +559,7 @@
     "RenjiUniSR",
     "RenjiOnsen"
    ],
+   "pw": 200588,
    "f": 1
   },
   "SheepR": {
@@ -538,6 +573,7 @@
     "SheepAltR1",
     "SheepAltR2"
    ],
+   "pw": 75675,
    "f": 1
   },
   "SpiralCatAltR1": {
@@ -551,6 +587,7 @@
     "SpiralCatR",
     "SpiralCatAltR2"
    ],
+   "pw": 78730,
    "f": 1
   },
   "RyokoRegSR": {
@@ -564,6 +601,7 @@
     "RyokoReg",
     "RyokoSwim"
    ],
+   "pw": 157924,
    "f": 1
   },
   "YinYangSR": {
@@ -577,6 +615,7 @@
     "YinYangAltSR2",
     "YinYangAltSR1"
    ],
+   "pw": 81333,
    "f": 1
   },
   "LionR": {
@@ -590,6 +629,7 @@
     "LionAltR1",
     "LionAltR2"
    ],
+   "pw": 90403,
    "f": 1
   },
   "ErikaRegSR": {
@@ -602,6 +642,7 @@
    "alt": [
     "ErikaReg"
    ],
+   "pw": 133028,
    "f": 1
   },
   "MokumaruReg": {
@@ -612,6 +653,7 @@
    "s": 4,
    "lv": 25,
    "alt": [],
+   "pw": 157963,
    "f": 1
   },
   "TomoyaUniSR": {
@@ -626,6 +668,7 @@
     "TomoyaPara",
     "TomoyaOnsen"
    ],
+   "pw": 68759,
    "f": 1
   },
   "BullSR": {
@@ -639,6 +682,7 @@
     "BullAltSR2",
     "BullAltSR1"
    ],
+   "pw": 144294,
    "f": 1
   },
   "PenguinR": {
@@ -652,6 +696,7 @@
     "PenguinAltR1",
     "PenguinAltR2"
    ],
+   "pw": 98424,
    "f": 1
   },
   "ZenRegSR": {
@@ -664,6 +709,7 @@
    "alt": [
     "ZenReg"
    ],
+   "pw": 160293,
    "f": 1
   },
   "RibbonCatSR": {
@@ -677,6 +723,7 @@
     "RibbonCatAltSR1",
     "RibbonCatAltSR2"
    ],
+   "pw": 124773,
    "f": 1
   },
   "NayuRegSR": {
@@ -690,6 +737,7 @@
     "NayuReg",
     "NayuSwim"
    ],
+   "pw": 96927,
    "f": 1
   }
  }

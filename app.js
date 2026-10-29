@@ -3,15 +3,20 @@ const IMG = 'https://peilvwrqgauwlaqojttq.supabase.co/storage/v1/object/public/p
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const pct = (x) => (100 * x).toFixed(1) + '%';
+// 전력 표시는 게임 편성 화면과 같게: 10만 이상은 만 단위 반올림(166만) · 그 아래는 소수 한 자리(7.6만 · 9만)
+const man = (v) => (v >= 1e5 ? Math.round(v / 1e4) + '만' : v >= 1e4 ? +(v / 1e4).toFixed(1) + '만' : v.toLocaleString());
+const sumPw = (us) => (us.every((u) => u && u.pw != null) ? us.reduce((a, u) => a + u.pw, 0) : null);
 // 게임 카드 그림(../img · Characters 236)이 없으면 전신 그림을 빌린다: 기본형 → 같은 계열 순
 function alts(u) { const k = u.t, a = []; if (/AltSR$/.test(k)) a.push(k.replace(/AltSR$/, 'AltR'), k.replace(/AltSR$/, 'R')); if (/SR$/.test(k)) a.push(k.replace(/SR$/, '')); if (/SR\d$/.test(k)) a.push(k.replace(/SR\d$/, 'R')); return [...new Set([...a, ...(u.alt || [])])].filter((x) => x !== k); }
 window.imgErr = (img) => { const a = (img.dataset.alt || '').split(',').filter(Boolean); if (a.length) { img.dataset.alt = a.slice(1).join(','); img.src = IMG + a[0] + '.jpg'; } else img.style.visibility = 'hidden'; };
 const pic = (u) => (u.f ? `<img class="face" src="../img/${u.t}.jpg" alt="" loading="lazy">` : `<img src="${IMG}${u.t}.jpg" alt="" loading="lazy" data-alt="${alts(u).join(',')}" onerror="imgErr(this)">`);
-const card = (u, moved = '') => `<div class="card ${u.r} ${u.e} ${moved ? 'moved' : ''}" title="${esc(u.n)} · ${u.r} · Lv${u.lv}">
+const card = (u, moved = '') => `<div class="cell"><div class="card ${u.r} ${u.e} ${moved ? 'moved' : ''}" title="${esc(u.n)} · ${u.r} · Lv${u.lv}${u.pw != null ? ' · 전력 ' + u.pw.toLocaleString() : ''}">
   ${pic(u)}
   <span class="rar">${u.r}</span><span class="el"></span><span class="n">${esc(u.n)}</span>
-  ${u.s ? `<span class="st">${'★'.repeat(u.s)}</span>` : ''}<span class="lv">Lv.${u.lv}${moved}</span></div>`;
-const rows = (cells) => [0, 1, 2, 3].map((p) => `<div class="plt-row"><b>${p + 1}반</b>${cells.slice(p * 6, p * 6 + 6).join('')}</div>`).join('');
+  ${u.s ? `<span class="st">${'★'.repeat(u.s)}</span>` : ''}<span class="lv">Lv.${u.lv}${moved}</span></div>${u.pw != null ? `<span class="pw">${man(u.pw)}</span>` : ''}</div>`;
+// us = 24명(순서대로) · 반 이름 줄에 그 반 전력 합계(게임의 «제 1반 🔥30,761,408»)
+const rows = (us, cells) => [0, 1, 2, 3].map((p) => { const t = sumPw(us.slice(p * 6, p * 6 + 6)); return `<div class="plt-row"><b>${p + 1}반${t != null ? `<i>전력 ${t.toLocaleString()}</i>` : ''}</b>${cells.slice(p * 6, p * 6 + 6).join('')}</div>`; }).join('');
+const deckPw = (us) => { const t = sumPw(us); return t != null ? ` · 전력 ${t.toLocaleString()}` : ''; };
 
 async function boot() {
   let X;
@@ -27,18 +32,20 @@ async function boot() {
       <div class="bar"><span class="c" style="width:${100 * m.current}%"></span><span class="p" style="width:${100 * m.proposed}%"></span></div></div>`;
   }).join('');
   $('pro-h').textContent = `${X.me.name} 님 추천 덱`;
-  $('pro').innerHTML = rows(X.proposed.map((t, pos) => { const was = X.current.indexOf(t); return card(X.units[t], was !== pos ? ` ←${Math.floor(was / 6) + 1}-${was % 6 + 1}` : ''); }));
+  const P = X.proposed.map((t) => X.units[t]), C = X.current.map((t) => X.units[t]);
+  $('pro').innerHTML = rows(P, X.proposed.map((t, pos) => { const was = X.current.indexOf(t); return card(X.units[t], was !== pos ? ` ←${Math.floor(was / 6) + 1}-${was % 6 + 1}` : ''); }));
   const n = X.proposed.filter((t, pos) => X.current.indexOf(t) !== pos).length;
   $('legend').textContent = `보라 테두리 = 자리가 바뀐 캐릭터 ${n}명 · «←2-3» = 지금 덱에서 2반 3번째에 있던 캐릭터`;
-  $('cur-h').textContent = `${X.me.name} 님 지금 덱 (통솔 ${X.me.rank})`;
-  $('cur').innerHTML = rows(X.current.map((t) => card(X.units[t])));
-  $('opp-h').textContent = `${X.opp.name} 님 덱 (통솔 ${X.opp.rank})`;
-  $('opp').innerHTML = rows(X.opp.deck.map((u) => card(u)));
+  $('cur-h').textContent = `${X.me.name} 님 지금 덱 (통솔 ${X.me.rank}${deckPw(C)})`;
+  $('cur').innerHTML = rows(C, C.map((u) => card(u)));
+  $('opp-h').textContent = `${X.opp.name} 님 덱 (통솔 ${X.opp.rank}${deckPw(X.opp.deck)})`;
+  $('opp').innerHTML = rows(X.opp.deck, X.opp.deck.map((u) => card(u)));
   $('notes').innerHTML = [
     `승률은 각 ${X.seeds.toLocaleString()}판 시뮬레이션 결과입니다(게임과 같은 무작위 규칙).`,
     `${esc(X.opp.name)} 님이 덱 순서를 바꾸면 결과가 달라집니다. 이 덱은 ${X.read}에 랭킹에서 읽은 순서 기준입니다.`,
     `투귀공명·캠퍼스 보너스는 랭킹에 안 나와서 두 분이 나온 가장 최근 투기장 기록의 값을 썼습니다(그 뒤로 올랐다면 조금 다를 수 있습니다). 통솔은 ${esc(X.me.name)} ${X.me.rank} · ${esc(X.opp.name)} ${X.opp.rank}.`,
     `이 순서는 ${esc(X.opp.name)} 님 상대로만 계산했습니다. 투기장 덱과 유적 덱은 같은 페이지를 쓰니, 다른 상대나 유적에서는 지금 덱이 나을 수 있습니다.`,
+    ...(sumPw(C) != null ? [`전력은 ${X.read} 게임 프로필에서 읽은 값입니다(게임 편성 화면 숫자와 같음).`] : []),
     `같은 덱끼리라도 공격과 방어 승률이 다릅니다 — 공격하는 쪽이 자리마다 조금 먼저 들어와 먼저 행동하기 때문입니다. 그게 유리한지는 덱마다 다릅니다.`,
   ].map((t) => `<li>${t}</li>`).join('');
 }
