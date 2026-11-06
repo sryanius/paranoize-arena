@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>신규 캐릭터 소식</title>
+<meta property="og:title" content="패러노이즈 신규 캐릭터 — 레이카 «룸메이트의 온기» · 유이 «시간이여, 멈춰라»">
+<meta name="description" content="2026-11-05 게임 자료 갱신으로 들어온 신규 캐릭터 둘의 그림·능력치·스킬.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../app.css">
+<style>
+/* 신규 캐릭터 페이지 — 색은 app.css 의 토큰을 그대로 쓴다 */
+.lede b{color:var(--ink);font-weight:600}
+.char{margin-top:30px;background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
+.char-top{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:0}
+.portrait{position:relative;background:var(--raised);border-right:1px solid var(--line-soft)}
+.portrait img{display:block;width:100%;height:auto}
+.info{padding:18px 20px 20px;min-width:0}
+.name-row{display:flex;gap:14px;align-items:flex-start}
+.name-row .card{flex:0 0 74px;width:74px}
+.name-row h2{margin:0;font-size:24px;line-height:1.25}
+.name-row h2 small{display:block;font-family:"IBM Plex Sans KR",system-ui,sans-serif;font-size:13px;font-weight:500;color:var(--muted);margin-top:2px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{font:600 11.5px "IBM Plex Mono",monospace;padding:2px 9px;border-radius:99px;border:1px solid var(--line);color:var(--body);background:var(--raised);white-space:nowrap}
+.chip.ssr{border-color:#d4a83a;background:linear-gradient(90deg,#c48f1c,#f0c65a);color:#2a1d00}
+.chip.Fire{color:var(--fire);border-color:currentColor}
+.chip.Water{color:var(--water);border-color:currentColor}
+.chip.live{color:var(--up);border-color:currentColor}
+.chip.soon{color:var(--accent);border-color:currentColor}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:16px 0 4px}
+.stat{background:var(--raised);border:1px solid var(--line-soft);border-radius:10px;padding:8px 10px}
+.stat .k{font-size:12px;color:var(--muted)}
+.stat .v{font:600 20px "IBM Plex Mono",monospace;color:var(--ink);font-variant-numeric:tabular-nums;line-height:1.2}
+.sum{font-size:12px;color:var(--faint);margin:0}
+h3{font-family:"Gowun Batang",Georgia,serif;font-size:15px;color:var(--ink);margin:18px 0 6px}
+.skills{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.skills li{border:1px solid var(--line-soft);border-radius:10px;padding:9px 12px;background:var(--surface)}
+.skills .t{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline}
+.skills .t b{color:var(--ink);font-weight:600}
+.skills .t i{font:500 11px "IBM Plex Mono",monospace;font-style:normal;color:var(--faint)}
+.skills .t em{font:600 11px "IBM Plex Mono",monospace;font-style:normal;color:var(--accent);border:1px solid currentColor;border-radius:99px;padding:0 7px}
+.skills p{margin:3px 0 0;font-size:13.5px}
+.skills .guess{color:var(--muted)}
+.lv5{display:flex;gap:4px;flex-wrap:wrap;margin-top:6px}
+.lv5 span{font:600 11.5px "IBM Plex Mono",monospace;padding:1px 8px;border-radius:6px;background:var(--raised);border:1px solid var(--line-soft);color:var(--body)}
+.lv5 span s{text-decoration:none;color:var(--faint);font-weight:500;margin-right:3px}
+.sim{margin-top:16px;padding:9px 12px;border-left:3px solid var(--up);background:var(--raised);border-radius:0 8px 8px 0;font-size:13px}
+.sim.wait{border-left-color:var(--accent)}
+.post{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:16px;align-items:center;padding:16px 20px;border-top:1px solid var(--line-soft);background:var(--raised)}
+.post img{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--line)}
+.post p{margin:0;font-size:13px;color:var(--muted)}
+.post p b{display:block;font-family:"Gowun Batang",Georgia,serif;font-size:16px;color:var(--ink);margin-bottom:2px}
+@media (max-width:720px){
+  .char-top{grid-template-columns:1fr}
+  .portrait{border-right:0;border-bottom:1px solid var(--line-soft);max-height:560px;overflow:hidden}
+  .info{padding:16px}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .post{grid-template-columns:120px minmax(0,1fr);padding:14px 16px;gap:12px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">PARANOIZE · 신규 캐릭터</p>
+    <h1>신규 캐릭터 두 명</h1>
+    <p class="lede">게임 자료가 <b>2026-11-05 15:09</b>에 갱신되면서 들어온 캐릭터입니다. 레이카 «룸메이트의 온기»는 이번 갱신으로 <b>공개</b>됐고, 유이 «시간이여, 멈춰라»는 자료에 새로 들어왔지만 아직 <b>숨김</b> 표시라 출시 전으로 보입니다. 그림·능력치·스킬은 모두 게임이 받는 공개 자료에서 꺼냈습니다.</p>
+  </header>
+
+  <!-- 레이카 · 룸메이트의 온기 -->
+  <section class="char">
+    <div class="char-top">
+      <div class="portrait"><img src="img/ReikaMorning.jpg" alt="레이카 «룸메이트의 온기» 전신 그림" width="640" height="1138"></div>
+      <div class="info">
+        <div class="name-row">
+          <span class="card SSR Water"><img class="face" src="../img/ReikaMorning.jpg" alt=""><span class="rar">SSR</span><span class="el"></span></span>
+          <h2>레이카<small>룸메이트의 온기</small></h2>
+        </div>
+        <div class="chips"><span class="chip ssr">SSR</span><span class="chip Water">물 속성</span><span class="chip live">11-05 공개</span></div>
+        <div class="stats">
+          <div class="stat"><div class="k">근력</div><div class="v">600</div></div>
+          <div class="stat"><div class="k">체력</div><div class="v">800</div></div>
+          <div class="stat"><div class="k">지력</div><div class="v">800</div></div>
+          <div class="stat"><div class="k">기력</div><div class="v">600</div></div>
+        </div>
+        <p class="sum">기본 능력치 합 2,800</p>
+        <h3>스킬</h3>
+        <ul class="skills">
+          <li><div class="t"><b>신속 공격</b><i>물리 · 70 TU</i></div><p>적 1명에게 0.75배의 대미지를 준다.</p></li>
+          <li><div class="t"><b>타임 스트라이크</b><i>물리 · 100 TU</i></div><p>130TU 이상의 적 1기에게 4배의 대미지를 준다. 200TU 이상이면 5배의 대미지.</p></li>
+          <li><div class="t"><b>HP 반전EX(전체)</b><em>Lv 101</em><i>130 TU · 전투 중 1회</i></div><p>HP가 30% 미만인 아군 전체(자신 포함)를 대상으로 HP를 반전시킨다. (EX 스킬은 MP 소비 없음)</p></li>
+          <li><div class="t"><b>근성</b><em>Lv 76</em><i>패시브</i></div><p>치명상을 당해도 HP 1로 생존한다. (이미 HP가 1일 때는 발동하지 않는다)</p></li>
+          <li><div class="t"><b>입장 해독(전체)</b><i>고유 스킬</i></div><p>증원으로 나왔을 때, 아군 전체를 일정 확률로 해독한다.</p>
+            <div class="lv5"><span><s>Lv1</s>10%</span><span><s>Lv2</s>20%</span><span><s>Lv3</s>40%</span><span><s>Lv4</s>70%</span><span><s>Lv5</s>100%</span></div></li>
+        </ul>
+        <div class="sim">시뮬레이터: 이 레이카가 나온 투기장 기록 7판을 <b>7판 모두 똑같이</b> 재현합니다.</div>
+      </div>
+    </div>
+    <div class="post">
+      <img src="img/PCReikaMorning.jpg" alt="엽서 «두목의 그릇»" width="560" height="957" loading="lazy">
+      <p><b>엽서 «두목의 그릇»</b>레이카 «룸메이트의 온기»의 전용 엽서(SSR · 물). 이번 갱신에서 함께 공개로 바뀌었습니다.</p>
+    </div>
+  </section>
+
+  <!-- 유이 · 시간이여, 멈춰라 -->
+  <section class="char">
+    <div class="char-top">
+      <div class="portrait"><img src="img/YuiCasual.jpg" alt="유이 «시간이여, 멈춰라» 전신 그림" width="640" height="1138" loading="lazy"></div>
+      <div class="info">
+        <div class="name-row">
+          <span class="card SSR Fire"><img class="face" src="../img/YuiCasual.jpg" alt=""><span class="rar">SSR</span><span class="el"></span></span>
+          <h2>유이<small>시간이여, 멈춰라</small></h2>
+        </div>
+        <div class="chips"><span class="chip ssr">SSR</span><span class="chip Fire">불 속성</span><span class="chip soon">출시 전 · 자료상 숨김</span></div>
+        <div class="stats">
+          <div class="stat"><div class="k">근력</div><div class="v">700</div></div>
+          <div class="stat"><div class="k">체력</div><div class="v">700</div></div>
+          <div class="stat"><div class="k">지력</div><div class="v">700</div></div>
+          <div class="stat"><div class="k">기력</div><div class="v">700</div></div>
+        </div>
+        <p class="sum">기본 능력치 합 2,800</p>
+        <h3>스킬</h3>
+        <ul class="skills">
+          <li><div class="t"><b>헤비 어택</b><i>특수 · 200 TU</i></div><p>적 1기에게 2배의 대미지를 준다.</p></li>
+          <li><div class="t"><b>포이즌 이터</b><i>특수 · 130 TU</i></div><p>독 상태의 적 1기에게 4배의 대미지를 준다.</p></li>
+          <li><div class="t"><b>EX 익스체인지</b><em>Lv 76</em><i>50 TU · 전투 중 1회</i></div><p>아군 1기를 다음 증원 캐릭터와 교대한다. 증원이 1명 이상 남아 있을 때만 쓴다. (EX 스킬은 MP 소비 없음)</p></li>
+          <li><div class="t"><b>(이름 미정)</b><em>Lv 101</em><i>특수 · 130 TU · MP 2</i></div><p class="guess">게임 글이 아직 없어 자료로 읽은 내용입니다: 자신 HP가 75% 미만일 때, 독 상태의 적 1기에게 4배의 대미지를 주고 자신의 HP를 50% 회복한다.</p></li>
+          <li><div class="t"><b>복수 포이즌(전체)</b><i>고유 스킬</i></div><p>적의 공격으로 전투 불능이 됐을 때, 적 전체를 일정 확률로 독 상태로 만든다.</p>
+            <div class="lv5"><span><s>Lv1</s>7%</span><span><s>Lv2</s>14%</span><span><s>Lv3</s>28%</span><span><s>Lv4</s>49%</span><span><s>Lv5</s>70%</span></div></li>
+        </ul>
+        <div class="sim wait">시뮬레이터: 아직 실제 전투 기록이 없어 정확도는 확인 전입니다. 덱에 넣어 돌리면 오류 없이 돌고, 포이즌 이터·EX 익스체인지·복수 포이즌이 발동합니다.</div>
+      </div>
+    </div>
+    <div class="post">
+      <img src="img/PCYuiCasual.jpg" alt="엽서 «그대를 바라보다»" width="560" height="957" loading="lazy">
+      <p><b>엽서 «그대를 바라보다»</b>유이 «시간이여, 멈춰라»의 전용 엽서(SSR · 불). 캐릭터와 마찬가지로 아직 숨김입니다.</p>
+    </div>
+  </section>
+
+  <h2>함께 바뀐 것</h2>
+  <div class="note"><ul>
+    <li>잭 «마지막에 서 있는 자»·로사 «달밤의 철학»의 엽서도 이번 갱신에서 공개로 바뀌었습니다(캐릭터는 11-02 무렵 공개).</li>
+    <li>길드 꾸러미를 쓰면 <code>python tools/fetch_cdn.py</code> 로 자료를 받은 뒤 <code>node tools/vcheck.mjs</code> 가 전부 ✓ 인지 보세요. 그러면 두 캐릭터가 시뮬레이터에 들어갑니다.</li>
+    <li>덱에 이 레이카가 있으면 랭킹 덱 읽기가 실패하던 문제는, 레이카가 공개됐으니 풀렸을 것으로 보입니다(아직 확인 전).</li>
+    <li>숨김 캐릭터는 출시 일정이나 내용이 바뀔 수 있습니다.</li>
+  </ul></div>
+
+  <footer>자료: 게임이 내려받는 공개 콘텐츠(2026-11-05 15:09 갱신) · 그림도 같은 곳의 원본에서 줄였습니다. 스킬 문구는 게임 안의 한국어 글 그대로입니다(이름이 없는 하나만 자료로 풀어 적음). 투기장 추천 덱은 <a href="../1/">1번</a>·<a href="../2/">2번</a>에 있습니다.</footer>
+</div>
+</body>
+</html>
